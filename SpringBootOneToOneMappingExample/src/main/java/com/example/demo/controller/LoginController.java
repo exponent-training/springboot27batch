@@ -8,6 +8,7 @@ import org.springframework.web.bind.annotation.RequestParam;
 import org.springframework.web.bind.annotation.RestController;
 
 import com.example.demo.entity.Login;
+import com.example.demo.exception.InvalidUserExeption;
 import com.example.demo.service.LoginService;
 
 @RestController
@@ -26,7 +27,13 @@ public class LoginController {
 	@GetMapping(value = "/login")
 	public Login getLoginData(@RequestParam String uname,@RequestParam String pass) {
 		System.out.println("Login Credentials : " + uname + " " + pass);
+		try {
 		Login login = loginService.loginCheck(uname, pass);
 		return login;
+		}catch (InvalidUserExeption e) {
+			// TODO: handle exception
+			System.out.println(e.getMessage());
+		}
+		return new Login();
 	}
 }
