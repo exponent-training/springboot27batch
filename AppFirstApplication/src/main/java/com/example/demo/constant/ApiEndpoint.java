@@ -13,4 +13,8 @@ public class ApiEndpoint {
 	
 	public static final String ASSIGN_ROLE_EMP = "/emp/{empcode}";
 	
+	public static final String LOGIN = "/emp/login"; 
+	
+	public static final String INCIDENT_CREATE = "/incident/create/{empcode}";
+	
 }
