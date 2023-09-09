@@ -50,5 +50,9 @@ public class Incident {
 	
 	private String updateddate;
 	
+	private String assignedto;
 	
+	private String resolvedby;
+	
+	private String resolveddate;
 }

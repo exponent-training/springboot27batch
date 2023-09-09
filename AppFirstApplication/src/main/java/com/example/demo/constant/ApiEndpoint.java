@@ -17,4 +17,8 @@ public class ApiEndpoint {
 	
 	public static final String INCIDENT_CREATE = "/incident/create/{empcode}";
 	
+	public static final String GET_NEW_INCIDENT = "/incident/{status}";
+	
+	public static final String ASSIGNED_TO = "/incident/assigned/{empCode}";
+	
 }
